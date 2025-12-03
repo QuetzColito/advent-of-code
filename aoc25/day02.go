@@ -13,7 +13,7 @@ import (
 func divisors(x int) []int {
 	var result []int
 	for i := range x {
-		if i > 0 && x%i == 0 {
+		if i > 1 && x%i == 0 {
 			result = append(result, i)
 		}
 	}
@@ -23,7 +23,7 @@ func divisors(x int) []int {
 func main() {
 	start := time.Now()
 
-	file, err := os.Open("02_test.txt")
+	file, err := os.Open("02.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
