@@ -23,7 +23,7 @@ func divisors(x int) []int {
 func main() {
 	start := time.Now()
 
-	file, err := os.Open("02.txt")
+	file, err := os.Open("input.txt")
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -12,7 +12,7 @@ import (
 func main() {
 	start := time.Now()
 
-	file, err := os.Open("03_test.txt")
+	file, err := os.Open("input.txt")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -28,7 +28,7 @@ func main() {
 			current := int(char - '0')
 			used := false
 
-			for i := 0; i < len(charge); i++ {
+			for i := range len(charge) {
 				if used {
 					charge[i] = 0
 				} else if len(runes)-index >= len(charge)-i && current > charge[i] {
